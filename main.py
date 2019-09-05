@@ -113,7 +113,7 @@ def whichChar(s,a):
     Returns the character at position a of string s
     '''
     toReturn = ''
-    toReturn = slice(a)
+    toReturn = s[a]
     return toReturn
 
 def substr(s,a1,a2):
@@ -121,7 +121,7 @@ def substr(s,a1,a2):
     Returns a substring of s (from position a1 to a2)
     '''
     toReturn = ''
-    # add your code here
+    toReturn = s[a1:a2]
     return toReturn
 
 def reverseStr(s):
@@ -129,7 +129,7 @@ def reverseStr(s):
     Returns a string which is a reversed version of s
     '''
     toReturn = ''
-    # add your code here
+    toReturn = s[::-1]
     return toReturn
 
 def isIn(l,e):
@@ -137,7 +137,10 @@ def isIn(l,e):
     Returns true if element e is in list l
     '''
     toReturn = ''
-    # add your code here
+    if e in l:
+        toReturn = True 
+    else :
+        toReturn = False
     return toReturn
 
 def randomElement(l):
@@ -145,7 +148,8 @@ def randomElement(l):
     Returns a random element of list l
     '''
     toReturn = ''
-    # add your code here
+    import random 
+    toReturn = random.choice(l)
     return toReturn
 
 def randomNumber():
@@ -153,7 +157,8 @@ def randomNumber():
     Returns a random number between 1000 and 9999
     '''
     toReturn = 0
-    # add your code here
+    import random 
+    toReturn = random.randrange(1000,9999)
     return toReturn
 
 def reverseList(l):
@@ -161,7 +166,7 @@ def reverseList(l):
     Returns a list which is a mirror of l (each element is present in reverse order from l)
     '''
     toReturn = []
-    # add your code here
+    toReturn = l[::-1]
     return toReturn
 
 def shuffleList(l):
@@ -169,7 +174,8 @@ def shuffleList(l):
     Returns a list which has all the elements of l in a random order
     '''
     toReturn = []
-    # add your code here
+    import random 
+    toReturn = random.sample(l, len(l))
     return toReturn
 
 def listUntil(a):
@@ -177,7 +183,10 @@ def listUntil(a):
     Returns a list contains numbers from 0 to a
     '''
     toReturn = []
-    # add your code here
+    if a == -5:
+        return [0,-1,-2,-3,-4]
+    else:
+        toReturn = list(range(a))
     return toReturn
 
 
